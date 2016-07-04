@@ -37,13 +37,13 @@
                 <div class="row">
                     <div class="col-xs-6">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-map-user"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-file-text-o"></i></span>
                             <input name="cnpj" type="text" class="form-control" data-inputmask='"mask": "99.999.999/9999-99"' data-mask placeholder="CNPJ" value="{{ @$client->cnpj }}">
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-map-user"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-file-text-o"></i></span>
                             <input name="cpf" type="text" class="form-control" data-inputmask='"mask": "999.999.999-99"' data-mask placeholder="CPF" value="{{ @$client->cpf }}">
                         </div>
                     </div>
@@ -113,13 +113,13 @@
                     <div class="col-xs-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                            <input name="telefone_contato" type="text" class="form-control" data-inputmask='"mask": "(99) 999-99999"' data-mask placeholder="Telefone de Contato" value="{{ @$client->telefone_contato }}">
+                            <input name="telefone_contato" type="text" class="form-control" data-inputmask='"mask": "(99) 9999-99999"' data-mask placeholder="Telefone de Contato" value="{{ @$client->telefone_contato }}">
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                            <input name="telefone_cobranca" type="text" class="form-control" data-inputmask='"mask": "(99) 999-99999"' data-mask placeholder="Telefone de Cobrança" value="{{ @$client->telefone_cobranca }}">
+                            <input name="telefone_cobranca" type="text" class="form-control" data-inputmask='"mask": "(99) 9999-99999"' data-mask placeholder="Telefone de Cobrança" value="{{ @$client->telefone_cobranca }}">
                         </div>
                     </div>
                 </div>

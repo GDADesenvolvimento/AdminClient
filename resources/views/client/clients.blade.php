@@ -28,8 +28,8 @@
                 <thead>
                 <tr>
                     <th>Nome Fanstasia</th>
-                    <th>CNPJ</th>
-                    <th>E-mail</th>
+                    <th>E-mail de Contato</th>
+                    <th>Telefone de Contato</th>
                     <th>Criado em</th>
                     <th>Alterado em</th>
                 </tr>
@@ -38,8 +38,8 @@
                 @foreach($clients as $client)
                     <tr>
                         <td><a href="{{ route('client.edit', ['id' => $client->id]) }}">{{$client->nome}}</a></td>
-                        <td>{{$client->cnpj}}</td>
-                        <td>{{$client->email}}</td>
+                        <td>{{$client->email_contato}}</td>
+                        <td>{{$client->telefone_contato}}</td>
                         <td>{{ dateFormat($client->created_at) }}</td>
                         <td>{{ dateFormat($client->updated_at) }}</td>
                     </tr>
