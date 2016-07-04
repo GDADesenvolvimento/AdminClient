@@ -21,8 +21,8 @@ Adicione o seguinte código ao arquivo resources/views/sidebar.blade.php:
 
 ```php
 <li class="{{ setActiveMenu('client') }}">
-  <a href="{{route('client')}}">
-    <i class="fa fa-info-users"></i> <span>Clientes</span>
+  <a href="{{route('clients')}}">
+    <i class="fa fa-users"></i> <span>Clientes</span>
   </a>
 </li>
 ```

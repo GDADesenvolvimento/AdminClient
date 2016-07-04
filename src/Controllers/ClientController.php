@@ -20,7 +20,7 @@ class ClientController extends Controller
 
     public function form()
     {
-        return view('client.form');
+        return view('AdminClient::client.form');
     }
 
     public function create(Request $request)
@@ -72,7 +72,7 @@ class ClientController extends Controller
     public function edit($id)
     {
         $client = Client::find($id);
-        return view('client.edit', compact('client'));
+        return view('AdminClient::client.edit', compact('client'));
     }
 
     public function update(Request $request)
