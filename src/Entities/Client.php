@@ -10,18 +10,16 @@ class Client extends Model
     protected $fillable = [
         'nome',
         'cnpj',
-        'nome_fantasia',
+        'cpf',
+        'email_contato',
+        'email_cobranca',
+        'telefone_contato',
+        'telefone_cobranca',
         'endereco',
         'numero',
         'complemento',
         'bairro',
         'municipio',
         'uf',
-        'site',
-        'email',
-        'telefone_fixo',
-        'telefone_movel',
-        'atividade_principal',
-        'responsavel',
     ];
 }

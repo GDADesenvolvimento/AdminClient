@@ -27,20 +27,17 @@ class ClientController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nome' => 'required|min:3',
-            'cnpj' => 'required|min:18|max:18',
-            'nome_fantasia' => 'required',
+            'cnpj' => 'min:18|max:18',
+            'cpf' => 'min:14|max:14',
+            'email_contato' => 'required|email',
+            'email_cobranca' => 'email',
+            'telefone_contato' => 'required',
             'endereco' => 'required',
             'numero' => 'required|numeric',
             'complemento' => 'required',
             'bairro' => 'required',
             'municipio' => 'required',
             'uf' => 'required|min:2|max:2',
-            'site' => 'required',
-            'email' => 'required|email',
-            'telefone_fixo' => 'required',
-            'telefone_movel' => 'required',
-            'atividade_principal' => 'required',
-            'responsavel' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -50,19 +47,17 @@ class ClientController extends Controller
         $client = new Client();
         $client->nome = $request->input('nome');
         $client->cnpj = $request->input('cnpj');
-        $client->nome_fantasia = $request->input('nome_fantasia');
+        $client->cpf = $request->input('cpf');
+        $client->email_contato = $request->input('email_contato');
+        $client->email_cobranca = $request->input('email_cobranca');
+        $client->telefone_contato = $request->input('telefone_contato');
+        $client->telefone_cobranca = $request->input('telefone_cobranca');
         $client->endereco = $request->input('endereco');
         $client->numero = $request->input('numero');
         $client->complemento = $request->input('complemento');
         $client->bairro = $request->input('bairro');
         $client->municipio = $request->input('municipio');
         $client->uf = $request->input('uf');
-        $client->site = $request->input('site');
-        $client->email = $request->input('email');
-        $client->telefone_fixo = $request->input('telefone_fixo');
-        $client->telefone_movel = $request->input('telefone_movel');
-        $client->atividade_principal = $request->input('atividade_principal');
-        $client->responsavel = $request->input('responsavel');
         $client->save();
 
         $clients = Client::all();
@@ -81,41 +76,36 @@ class ClientController extends Controller
 
         $validator = Validator::make($request->all(), [
             'nome' => 'required|min:3',
-            'cnpj' => 'required|min:18|max:18',
-            'nome_fantasia' => 'required',
+            'cnpj' => 'min:18|max:18',
+            'cpf' => 'min:14|max:14',
+            'email_contato' => 'required|email',
+            'email_cobranca' => 'email',
+            'telefone_contato' => 'required',
             'endereco' => 'required',
             'numero' => 'required|numeric',
             'complemento' => 'required',
             'bairro' => 'required',
             'municipio' => 'required',
             'uf' => 'required|min:2|max:2',
-            'site' => 'required',
-            'email' => 'required|email',
-            'telefone_fixo' => 'required',
-            'telefone_movel' => 'required',
-            'atividade_principal' => 'required',
-            'responsavel' => 'required'
         ]);
 
         if ($validator->fails()) {
             return redirect()->route('client.edit',['id' => $request->input('id')])->withErrors($validator)->withInput();
         }
-
+        
         $client->nome = $request->input('nome');
         $client->cnpj = $request->input('cnpj');
-        $client->nome_fantasia = $request->input('nome_fantasia');
+        $client->cpf = $request->input('cpf');
+        $client->email_contato = $request->input('email_contato');
+        $client->email_cobranca = $request->input('email_cobranca');
+        $client->telefone_contato = $request->input('telefone_contato');
+        $client->telefone_cobranca = $request->input('telefone_cobranca');
         $client->endereco = $request->input('endereco');
         $client->numero = $request->input('numero');
         $client->complemento = $request->input('complemento');
         $client->bairro = $request->input('bairro');
         $client->municipio = $request->input('municipio');
         $client->uf = $request->input('uf');
-        $client->site = $request->input('site');
-        $client->email = $request->input('email');
-        $client->telefone_fixo = $request->input('telefone_fixo');
-        $client->telefone_movel = $request->input('telefone_movel');
-        $client->atividade_principal = $request->input('atividade_principal');
-        $client->responsavel = $request->input('responsavel');
         $client->save();
 
         if($client->save()){

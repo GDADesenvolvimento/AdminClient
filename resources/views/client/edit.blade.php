@@ -26,25 +26,25 @@
         <div class="box box-primary">
             <div class="box-body">
                 <div class="row">
-                    <div class="col-xs-8">
+                    <div class="col-xs-12">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
                             <input name="nome" type="text" class="form-control" placeholder="Nome" value="{{ @$client->nome }}">
                         </div>
                     </div>
-                    <div class="col-xs-4">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                            <input name="cnpj" type="text" class="form-control" data-inputmask='"mask": "99.999.999/9999-99"' data-mask placeholder="CNPJ" value="{{ @$client->cnpj }}">
-                        </div>
-                    </div>
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-xs-6">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                            <input name="nome_fantasia" type="text" class="form-control" placeholder="Nome Fantasia" value="{{ @$client->nome_fantasia }}">
+                            <span class="input-group-addon"><i class="fa fa-map-user"></i></span>
+                            <input name="cnpj" type="text" class="form-control" data-inputmask='"mask": "99.999.999/9999-99"' data-mask placeholder="CNPJ" value="{{ @$client->cnpj }}">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-map-user"></i></span>
+                            <input name="cpf" type="text" class="form-control" data-inputmask='"mask": "999.999.999-99"' data-mask placeholder="CPF" value="{{ @$client->cpf }}">
                         </div>
                     </div>
                 </div>
@@ -95,19 +95,16 @@
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-xs-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input name="site" type="text" class="form-control" placeholder="Site" value="{{ @$client->site }}">
+                            <input name="email_contato" type="email" class="form-control" placeholder="E-mail de Contato" value="{{ @$client->email_contato }}">
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-xs-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input name="email" type="email" class="form-control" placeholder="E-mail" value="{{ @$client->email }}">
+                            <input name="email_cobranca" type="email" class="form-control" placeholder="E-mail de Cobrança" value="{{ @$client->email_cobranca }}">
                         </div>
                     </div>
                 </div>
@@ -116,31 +113,13 @@
                     <div class="col-xs-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                            <input name="telefone_fixo" type="text" class="form-control" data-inputmask='"mask": "(99) 999-99999"' data-mask placeholder="Telefone Fixo" value="{{ @$client->telefone_fixo }}">
+                            <input name="telefone_contato" type="text" class="form-control" data-inputmask='"mask": "(99) 999-99999"' data-mask placeholder="Telefone de Contato" value="{{ @$client->telefone_contato }}">
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                            <input name="telefone_movel" type="text" class="form-control" data-inputmask='"mask": "(99) 999-99999"' data-mask placeholder="Telefone Môvel" value="{{ @$client->telefone_movel }}">
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-tasks"></i></span>
-                            <input name="atividade_principal" type="text" class="form-control" placeholder="Ativiadade Principal" value="{{ @$client->atividade_principal }}">
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                            <input name="responsavel" type="text" class="form-control" placeholder="Responsavel" value="{{ @$client->responsavel }}">
+                            <input name="telefone_cobranca" type="text" class="form-control" data-inputmask='"mask": "(99) 999-99999"' data-mask placeholder="Telefone de Cobrança" value="{{ @$client->telefone_cobranca }}">
                         </div>
                     </div>
                 </div>
