@@ -27,8 +27,6 @@ class ClientController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nome' => 'required|min:3',
-            'cnpj' => 'min:18|max:18',
-            'cpf' => 'min:14|max:14',
             'email_contato' => 'required|email',
             'email_cobranca' => 'email',
             'telefone_contato' => 'required',
@@ -76,10 +74,7 @@ class ClientController extends Controller
 
         $validator = Validator::make($request->all(), [
             'nome' => 'required|min:3',
-            'cnpj' => 'min:18|max:18',
-            'cpf' => 'min:14|max:14',
             'email_contato' => 'required|email',
-            'email_cobranca' => 'email',
             'telefone_contato' => 'required',
             'endereco' => 'required',
             'numero' => 'required|numeric',
