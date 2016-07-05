@@ -22,7 +22,7 @@ class GdaClientServiceProvider extends ServiceProvider
         ],"migrations");
 
         $this->publishes([
-            __DIR__."/tests" => base_path('tests')
+            __DIR__."/../../tests" => base_path('tests')
         ],"tests");
     }
     /**
